@@ -1,0 +1,25 @@
+{
+  "name": "jquery-fugit",
+  "description": "A lightweight jQuery plugin for time input fields.",
+  "homepage": "https://github.com/timgthomas/jquery-fugit",
+  "license": "MIT",
+  "authors": [
+    "Tim G. Thomas <tim@timgthomas.com>"
+  ],
+  "main": "dist/jquery.fugit.js",
+  "keywords": [
+    "jquery",
+    "jquery-plugin",
+    "input",
+    "time"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "ignore": [
+    "*",
+    "!/bower.json",
+    "!/dist/jquery.fugit.js",
+    "!/dist/jquery.fugit.css"
+  ]
+}

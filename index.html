@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery.Fugit</title>
+  <link rel="stylesheet" href="../dist/jquery.fugit.css">
+</head>
+
+<body>
+  <input id="fugit">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="../dist/jquery.fugit.js"></script>
+  <script>
+    $(function() {
+      $('#fugit').fugit().on('change.fugit', function(e) {
+        console.log('value changed to', $(e.currentTarget).val());
+      });
+    });
+  </script>
+</body>
+
+</html>
