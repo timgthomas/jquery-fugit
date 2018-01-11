@@ -1,41 +1,28 @@
 .fugit {
-
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  display: -o-inline-flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 1px;
-
-  appearance: textfield;
-  -moz-appearance: textfield;
   -webkit-appearance: textfield;
-
-  font: 400 11px system-ui; /* Chrome */
+     -moz-appearance: textfield;
+          appearance: textfield;
+  font: 400 11px system-ui;
   font: -moz-field;
-  font-feature-settings: 'lnum', 'tnum';
-  font-variant-numeric: lining-nums tabular-nums;
-
-}
+  -webkit-font-feature-settings: 'lnum', 'tnum';
+          font-feature-settings: 'lnum', 'tnum';
+  font-variant-numeric: lining-nums tabular-nums; }
 
 .fugit-input {
-
   width: 2ch;
   outline: none;
+  text-align: center; }
 
-  text-align: center;
-
-}
-
-  .fugit-input:focus {
-    background-color: Highlight;
-    background-color: -moz-dragtargetzone;
-  }
+.fugit-input:focus {
+  background-color: Highlight;
+  background-color: -moz-dragtargetzone; }
 
 .fugit-hours {
-  text-align: right;
-}
+  text-align: right; }
 
 .fugit-minutes {
-  text-align: left;
-}
+  text-align: left; }
