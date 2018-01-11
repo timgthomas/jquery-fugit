@@ -1,0 +1,35 @@
+{
+  "name": "jquery-fugit",
+  "version": "0.1.0",
+  "description": "A lightweight jQuery plugin for time input fields.",
+  "homepage": "https://github.com/timgthomas/jquery-fugit#readme",
+  "license": "MIT",
+  "author": "Tim G. Thomas <tim@timgthomas.com>",
+  "main": "dist/jquery.fugit.js",
+  "keywords": [
+    "jquery",
+    "jquery-plugin",
+    "input",
+    "time"
+  ],
+  "scripts": {
+    "start": "broccoli serve",
+    "build": "rm -rf dist && BROCCOLI_ENV=production broccoli build dist",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timgthomas/jquery-fugit.git"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "broccoli": "^1.1.4",
+    "broccoli-autoprefixer": "^5.0.0",
+    "broccoli-babel-transpiler": "^6.1.2",
+    "broccoli-env": "^0.0.1",
+    "broccoli-merge-trees": "^2.0.0",
+    "broccoli-sass": "^0.7.0",
+    "broccoli-watchify": "^1.0.1"
+  }
+}

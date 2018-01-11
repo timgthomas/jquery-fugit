@@ -1,0 +1,35 @@
+.fugit {
+
+  display: inline-flex;
+  padding: 1px;
+
+  appearance: textfield;
+
+  font: 400 11px system-ui; // Chrome
+  font: -moz-field;
+  font-feature-settings: 'lnum', 'tnum';
+  font-variant-numeric: lining-nums tabular-nums;
+
+}
+
+.fugit-input {
+
+  width: 2ch;
+  outline: none;
+
+  text-align: center;
+
+}
+
+  .fugit-input:focus {
+    background-color: Highlight;
+    background-color: -moz-dragtargetzone;
+  }
+
+.fugit-hours {
+  text-align: right;
+}
+
+.fugit-minutes {
+  text-align: left;
+}
