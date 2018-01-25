@@ -1,6 +1,6 @@
 {
   "name": "jquery-fugit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A lightweight jQuery plugin for time input fields.",
   "homepage": "https://github.com/timgthomas/jquery-fugit#readme",
   "license": "MIT",
