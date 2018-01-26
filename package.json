@@ -16,7 +16,7 @@
     "start": "broccoli serve",
     "build": "rm -rf dist && BROCCOLI_ENV=production broccoli build dist",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
