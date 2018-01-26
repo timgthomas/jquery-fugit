@@ -153,9 +153,18 @@ var _fugit2 = _interopRequireDefault(_fugit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(function ($) {
+(function (factory) {
 
-  $.fn.fugit = function (option) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else {
+    factory(jQuery);
+  }
+})(function ($) {
+
+  var pluginName = 'fugit';
+
+  $.fn[pluginName] = function (option) {
     for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       args[_key - 1] = arguments[_key];
     }
@@ -165,10 +174,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     this.each(function () {
 
       var $this = $(this),
-          data = $this.data('fugit');
+          data = $this.data(pluginName);
 
       if (!data) {
-        $this.data('fugit', new _fugit2.default($this));
+        $this.data(pluginName, new _fugit2.default($this));
       } else if (typeof data[option] === 'function') {
         result = data[option].apply(data, args);
       }
@@ -176,5 +185,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
     return result || this;
   };
-})(jQuery);
+});
 },{"./fugit":1}]},{},[2]);
