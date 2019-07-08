@@ -20,6 +20,7 @@ var Fugit = function Fugit($el) {
 
   this.$el = $el;
   this.$plugin = this.init();
+  this.setTime(this.$el.val());
   this._updateInput();
 };
 
