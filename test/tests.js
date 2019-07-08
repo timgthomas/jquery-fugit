@@ -224,3 +224,45 @@ module('given an initialized plugin', hooks => {
   });
 
 });
+
+module('given an initialized plugin with a default input value', hooks => {
+
+  hooks.beforeEach(() => {
+    let input = $('<input value="13:37">').appendTo('#qunit-fixture');
+    this.input = input.fugit();
+    this.subject = this.input.parent();
+  });
+
+  hooks.afterEach(() => {
+    this.input.fugit('remove');
+  });
+
+  test('when initialization has finished', assert => {
+
+    assert.equal(this.subject.find('.fugit-hours').text(), '13', 'should initialize with the default hour');
+    assert.equal(this.subject.find('.fugit-minutes').text(), '37', 'should initialize with the default minutes');
+
+  });
+
+});
+
+module('given an initialized plugin with an invalid default input value', hooks => {
+
+  hooks.beforeEach(() => {
+    let input = $('<input value="invalid">').appendTo('#qunit-fixture');
+    this.input = input.fugit();
+    this.subject = this.input.parent();
+  });
+
+  hooks.afterEach(() => {
+    this.input.fugit('remove');
+  });
+
+  test('when initialization has finished', assert => {
+
+    assert.equal(this.subject.find('.fugit-hours').text(), '00', 'should initialize with zeroed hours');
+    assert.equal(this.subject.find('.fugit-minutes').text(), '00', 'should initialize with zeroed minutes');
+
+  });
+
+});
